@@ -11,12 +11,27 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Project 1",
-    description: "Description of project 1",
-    technologies: ["React", "TypeScript", "Node.js"],
-    githubUrl: "https://github.com/...",
-    liveUrl: "https://...",
-    image: "/images/project1.png",
+    title: "Particle Playground",
+    description: "A trivial demonstration of basic WebGL implementation.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "WebGL",
+      "React-Three",
+      "Zustand",
+    ],
+    githubUrl: "https://github.com/wootiml33t/WebGLParticlePlayground",
+    liveUrl: "https://webglparticleplayground.netlify.app",
+    image: "/images/projects/particlePlayground.png",
   },
-  //TODO: Add projects
+  {
+    id: 2,
+    title: "Pokemon Matching",
+    description: "A matching tile game featuring images from PokeAPI.",
+    technologies: ["React", "TypeScript", "Node.js", "Styled-Components"],
+    githubUrl: "https://github.com/wootiml33t/PokemonMatchingGame",
+    liveUrl: "https://pokemonmatchinggame.netlify.app/",
+    image: "/images/projects/pokemonMatching.png",
+  },
 ];

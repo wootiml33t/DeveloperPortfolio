@@ -54,9 +54,18 @@ const SkillTag = styled(motion.div)`
 const About = () => {
   const skills = [
     "React",
+    "JavaScript",
     "TypeScript",
+    "CSS",
+    "Python",
+    "C#",
     "Node.js",
+    "Parse",
     "Express",
+    "Selenium",
+    "Puppeteer",
+    "Playwrite",
+    "Swagger",
     "MongoDB",
     "SQL",
     "Git",
@@ -65,6 +74,7 @@ const About = () => {
     "REST APIs",
     "GraphQL",
     "Testing",
+    "QA",
   ];
 
   return (
@@ -88,10 +98,11 @@ const About = () => {
               efficient, and user-friendly applications. With{" "}
               {`${new Date().getFullYear() - 2017}`} years of experience in web
               development, I specialize in building modern web applications
-              using React and TypeScript.
+              using React.
             </p>
             <p>
-              When I'm not coding, you can find me [your interests/hobbies]. I'm
+              When I'm not coding, you can find me herding goats, feeding
+              chickens, or hanging out with the rest of our petting zoo. I'm
               always eager to learn new technologies and tackle challenging
               problems.
             </p>

@@ -14,7 +14,6 @@ interface ApiResponse {
   message: string;
 }
 
-// Express specific types
 type ContactRequestHandler = RequestHandler<
   {}, // params
   ApiResponse, // response

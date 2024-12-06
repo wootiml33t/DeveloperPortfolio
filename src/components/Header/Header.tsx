@@ -8,7 +8,7 @@ const HeaderContainer = styled.header`
   left: 0;
   right: 0;
   padding: 1rem 2rem;
-  background: ${({ theme }) => theme.colors.background}CC;
+  background: ${({ theme }) => theme.colors.background};
   backdrop-filter: blur(10px);
   z-index: 1000;
 `;
@@ -25,6 +25,7 @@ const Logo = styled.a`
   font-size: 1.5rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary};
+  cursor: pointer;
 `;
 
 const MenuItems = styled.div`
@@ -73,21 +74,39 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const menuItems = [
-    { title: "Home", href: "#home" },
-    { title: "Projects", href: "#projects" },
-    { title: "About", href: "#about" },
-    { title: "Contact", href: "#contact" },
+    //{ title: "Home", href: "home" },
+    { title: "Projects", href: "projects" },
+    { title: "About", href: "about" },
+    { title: "Contact", href: "contact" },
   ];
+
+  const handleScroll = (elementId: string) => {
+    setIsMobileMenuOpen(false);
+
+    const element = document.getElementById(elementId);
+    if (element) {
+      const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <HeaderContainer>
       <Nav>
-        <Logo href="#home">YourName</Logo>
+        <Logo onClick={() => handleScroll("home")}>Zachariah Leonard</Logo>
         <MenuItems>
           {menuItems.map((item) => (
             <MenuItem
               key={item.title}
-              href={item.href}
+              onClick={() => handleScroll(item.href)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -111,8 +130,7 @@ const Header = () => {
             {menuItems.map((item) => (
               <MenuItem
                 key={item.title}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => handleScroll(item.href)}
               >
                 {item.title}
               </MenuItem>

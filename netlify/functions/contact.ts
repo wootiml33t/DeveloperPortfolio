@@ -1,4 +1,3 @@
-// netlify/functions/contact.ts
 import { Handler, HandlerEvent, HandlerResponse } from "@netlify/functions";
 import nodemailer from "nodemailer";
 
@@ -8,7 +7,6 @@ interface ContactForm {
   message: string;
 }
 
-// Define headers as a Record type
 const CORS_HEADERS: Record<string, string> = {
   "Access-Control-Allow-Origin": "*",
   "Content-Type": "application/json",

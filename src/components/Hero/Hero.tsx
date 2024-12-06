@@ -7,6 +7,8 @@ const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  margin-top: -80px;
+  padding-top: 80px;
 `;
 
 const Content = styled.div`
@@ -31,21 +33,21 @@ const Subtitle = styled(motion.p)`
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <HeroSection id="home">
       <Content>
         <Title
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Hi, I'm [Your Name]
+          Hi, I'm [Zachariah]
         </Title>
         <Subtitle
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Fullstack React/TypeScript Developer
+          Fullstack React Developer
         </Subtitle>
       </Content>
     </HeroSection>
