@@ -51,6 +51,6 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/wootiml33t/CharacterCreatorStableDiffusione",
     liveUrl: "https://character-creator-omega.vercel.app/",
-    image: "/images/projects/pokemonMatching.png",
+    image: "/images/projects/characterCreator.png",
   },
 ];
