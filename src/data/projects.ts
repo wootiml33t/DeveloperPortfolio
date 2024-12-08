@@ -34,4 +34,23 @@ export const projects: Project[] = [
     liveUrl: "https://pokemonmatchinggame.netlify.app/",
     image: "/images/projects/pokemonMatching.png",
   },
+  {
+    id: 3,
+    title: "Character Creator",
+    description:
+      "An interface that allows the user to choose preset character features to generate an image from Replicate's Stable Diffusion system.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Axios",
+      "Styled-Components",
+      "Prompt Engineering",
+      "Replicate",
+      "Stable Diffusion",
+    ],
+    githubUrl: "https://github.com/wootiml33t/CharacterCreatorStableDiffusione",
+    liveUrl: "https://character-creator-omega.vercel.app/",
+    image: "/images/projects/pokemonMatching.png",
+  },
 ];
